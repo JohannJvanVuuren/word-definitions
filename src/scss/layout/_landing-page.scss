@@ -1,0 +1,26 @@
+.landing-page {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //transform: translateY(-10%);
+
+  h1 {
+    margin-bottom: 5rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  p,
+  li {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 1rem;
+  }
+
+
+}

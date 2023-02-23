@@ -1,0 +1,39 @@
+@import '../abstract/variable';
+
+.landing-page {
+
+  color: $inverse-charcoal;
+
+  h1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 5px 5px 15px $inverse-charcoal,
+  -5px -5px 15px $dark-black-shadow;
+  }
+
+  p,
+  li {
+    text-align: center;
+    text-shadow: 5px 5px 15px $inverse-charcoal,
+    -5px -5px 15px $dark-black-shadow;
+  }
+
+  Link {
+    text-decoration: none;
+  }
+}
+
+.word-box-container {
+
+  label {
+    text-shadow: 5px 5px 15px $inverse-charcoal,
+    -5px -5px 15px $dark-black-shadow;
+    word-spacing: 1rem;
+  }
+
+  input {
+    font-size: 1.6rem;
+  }
+}

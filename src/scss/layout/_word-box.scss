@@ -1,0 +1,15 @@
+.word-box-container {
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+
+  .word-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

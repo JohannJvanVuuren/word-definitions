@@ -1,0 +1,20 @@
+@import '../abstract/variable';
+/* Global reset */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting of font size to 1rem = 10 px for ease of use */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(145deg, $dark-charcoal, $medium-charcoal, $light-charcoal);
+  height: 100vh;
+  font-family: 'Lato', Arial, sans-serif;
+}
