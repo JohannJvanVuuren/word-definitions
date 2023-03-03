@@ -15,6 +15,7 @@ html {
 
 body {
   background: linear-gradient(145deg, $dark-charcoal, $medium-charcoal, $light-charcoal);
-  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   font-family: 'Lato', Arial, sans-serif;
 }
