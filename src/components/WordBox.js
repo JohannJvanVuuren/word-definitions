@@ -4,6 +4,7 @@ import '../scss/main.css';
 import {useEffect, useState, useRef} from "react";
 import {HomeButton} from "./HomeButton";
 import {SearchResult} from "./SearchResult";
+import axios from "axios";
 
 
 /* Definition of a simple word input box component */
@@ -11,6 +12,7 @@ export const WordBox = () => {
 
     const [searchWord, setSearchWord] = useState( '');
     const [dataRequest, setDataRequest] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null);
     const inputRef = useRef(null);
 
@@ -18,21 +20,22 @@ export const WordBox = () => {
 
         const fetchURL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${searchWord}?key=${process.env.REACT_APP_DICTIONARY_API_KEY}`;
 
-        const fetchWord = async () => {
+        (async () => {
             try {
-            const response = await fetch(fetchURL)
-            const json = await response.json();
-            console.log(json);
-            setDataRequest(json);
+                let data;
+                const result = await axios.get(fetchURL)
+                if (result ) {
+                    setIsLoading(false)
+                    data = result.data;
+                    setDataRequest(data);
+                }
             } catch (err) {
                 setError(err)
-                console.log(error)
+                setIsLoading(true);
             }
-        }
+        })()
 
-        fetchWord().then(r => console.log(r));
-
-        },[searchWord]);
+        }, [searchWord]);
 
     const onClickHandler = () => {
         setSearchWord(inputRef.current.value);
@@ -69,6 +72,7 @@ export const WordBox = () => {
                 error={error}
                 data={dataRequest}
                 searchWord={searchWord}
+                loading={isLoading}
             />
             <HomeButton/>
 
