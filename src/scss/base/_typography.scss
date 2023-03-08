@@ -110,3 +110,25 @@
   }
 
 }
+
+/* Typographical styling of the error page */
+.error-page {
+
+  margin-top: 15rem;
+  color: $burgundy-text;
+
+  h1 {
+    font-size: 7rem;
+    text-align: center;
+
+  }
+
+  ol {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  li {
+    font-size: 3rem;
+  }
+}
