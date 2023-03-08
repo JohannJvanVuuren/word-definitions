@@ -1,0 +1,25 @@
+/* Layout of "Layout" component that will appear on all rendered children routes. */
+.layout {
+
+  /* General layout */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  justify-content: flex-start;
+  margin: 2rem;
+
+  /* Layout of top bar with logo, heading and navigation buttons */
+  .layout-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+
+  /* Positioning and sizing of the MW brand logo */
+  img {
+    height: 7rem;
+    margin-right: 3rem;
+  }
+}

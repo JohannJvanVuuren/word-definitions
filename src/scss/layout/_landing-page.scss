@@ -1,26 +1,35 @@
+/* The general layout of the landing page that the user lands on when accessing the app */
 .landing-page {
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  //transform: translateY(-10%);
+  display: block;
 
-  h1 {
-    margin-bottom: 5rem;
+  /* The positioning of the different elements that form part of the landing page */
+  .landing-page-elements {
+
+    /* General positioning */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    margin-top: 10rem;
+    position: relative;
+
+    /* Heading */
+    h1 {
+      margin-bottom: 5rem;
+    }
+
+    /* Making sure there are no bullets displayed with the ordered list.*/
+    ul {
+      list-style: none;
+    }
+
+    /* The positioning of the brand logo */
+    .mw-logo {
+      left: 2rem;
+      position: absolute;
+      top: 2rem;
+    }
   }
-
-  ul {
-    list-style: none;
-  }
-
-  p,
-  li {
-    font-size: 2rem;
-    font-weight: 300;
-    margin: 1rem;
-  }
-
-
 }

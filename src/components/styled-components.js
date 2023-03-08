@@ -1,3 +1,4 @@
+import '../scss/main.css';
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
 
@@ -18,17 +19,14 @@ export const StyledLink = styled(Link)`
   box-shadow: 1rem 1rem 3rem #000000,
 -1px -1px 3rem #DEDEDE;
   margin: 0 0 5rem 5rem;
-  width: 10rem;
+  width: 15rem;
   padding: 1rem 2rem 1rem 2rem;
   text-align: center;
   background-color: #DEDEDE;
   color: #080808;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  position: absolute;
-  bottom: 1rem;
-  right: 5rem;
 `
 
 /* Styling for styled component LandingPage.js- wordBox route */
@@ -64,7 +62,7 @@ export const StyledSearchButton = styled(Link)`
   outline: none;
   text-decoration: none;
 `
-
+/* Styled components for the form and input label for consistency */
 export const StyledForm = styled.form``
 
 export const StyledLabel = styled.label``

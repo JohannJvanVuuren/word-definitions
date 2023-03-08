@@ -1,56 +1,112 @@
+/* Import of colour variables */
 @import '../abstract/variable';
 
-.landing-page {
+/* Typography of general layout that is displayed on all pages */
+.layout {
 
+  /* Typography of navigation, title and logo bar at top of layout */
+  .layout-top {
+
+    /* Typography of the title of the application */
+    h1 {
+      color: $inverse-charcoal;
+      font-size: 7rem;
+      font-weight: 100;
+      text-align: center;
+      text-shadow: 5px 5px 15px $inverse-charcoal,
+      -5px -5px 15px $dark-black-shadow;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Typography of the landing page where the user lands on opening the application */
+.landing-page-elements {
+
+  /* Setting of all typographical element's colour */
   color: $inverse-charcoal;
 
+  /* Typography of text inside the page. All h1 elements */
   h1 {
     font-size: 7rem;
-    text-transform: uppercase;
-    font-weight: 100;
     text-align: center;
     text-shadow: 5px 5px 15px $inverse-charcoal,
-  -5px -5px 15px $dark-black-shadow;
+    -5px -5px 15px $dark-black-shadow;
+    text-transform: uppercase;
+    font-weight: 100;
   }
 
+  /* Typography of text inside the page. All p and li elements */
   p,
   li {
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
     text-align: center;
     text-shadow: 5px 5px 15px $inverse-charcoal,
     -5px -5px 15px $dark-black-shadow;
   }
 
+  /* Typography of text inside the page. Link */
   Link {
     text-decoration: none;
   }
 }
 
+/* General typography of the WordBox component */
 .word-box-container {
 
+  /* Styling of the input label typography */
   label {
+    color: $inverse-charcoal;
+    font-weight: 100;
+    margin-bottom: 3rem;
     text-shadow: 5px 5px 15px $inverse-charcoal,
     -5px -5px 15px $dark-black-shadow;
+    font-size: 2.5rem;
+    text-transform: uppercase;
     word-spacing: 1rem;
   }
 
+  /* Setting of the input field font-size */
   input {
     font-size: 1.6rem;
+    padding: 2rem 4rem;
   }
 }
 
+/* Setting colour of all text elements on the result page */
 .result-page {
-
-  color: #DEDEDE;
-
+  color: $inverse-charcoal;
 }
 
+/* Setting of the result search results typography */
 .result-box {
-  color: #DEDEDE;
-  margin-left: 1rem;
-  width: 50rem;
+  color: $inverse-charcoal;
   font-size: 1.6rem;
+  width: 50rem;
 
+  /* Making sure the bullets appear inside the .result-box div */
   ul {
     list-style-position: inside;
   }
+
+  h1 {
+    color: $burgundy-text;
+    font-size: 8rem;
+    font-weight: 300;
+    margin-top: 0;
+    text-transform: capitalize;
+
+  }
+
+  h2 {
+    color: $dark-blue;
+  }
+
+  p {
+    color: $emerald-green;
+    font-weight: 700;
+  }
+
 }
